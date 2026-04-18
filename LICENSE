@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>MarkovKey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="phone-screen">
+      <div class="status-bar">
+        <span class="time" id="clock">9:41</span>
+        <div class="status-icons">
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="white"><rect x="0" y="3" width="3" height="9" rx="1"/><rect x="4.5" y="2" width="3" height="10" rx="1"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1" opacity=".3"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><path d="M8 2.4C5.6 2.4 3.4 3.4 1.8 5L0 3.2C2.2 1.2 5 0 8 0s5.8 1.2 8 3.2L14.2 5C12.6 3.4 10.4 2.4 8 2.4z"/><path d="M8 5.6c-1.6 0-3 .6-4.1 1.6L2.1 5.4C3.6 4 5.7 3.2 8 3.2s4.4.8 5.9 2.2l-1.8 1.8C11 6.2 9.6 5.6 8 5.6z"/><circle cx="8" cy="10" r="2"/></svg>
+          <div class="battery"><div class="battery-inner" style="width:78%"></div></div>
+        </div>
+      </div>
+
+      <div class="chat-header">
+        <div class="back-btn">‹</div>
+        <div class="contact-info">
+          <div class="avatar">M</div>
+          <div class="contact-details">
+            <div class="contact-name">MarkovKey</div>
+            <div class="contact-status" id="contact-status">Chargement…</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+        </div>
+      </div>
+
+      <div class="messages-area" id="messages"></div>
+
+      <div class="suggestion-bar" id="suggestion-bar">
+        <button class="suggestion-btn" id="sug-0"></button>
+        <div class="suggestion-divider"></div>
+        <button class="suggestion-btn" id="sug-1"></button>
+        <div class="suggestion-divider"></div>
+        <button class="suggestion-btn" id="sug-2"></button>
+      </div>
+
+      <div class="input-row">
+        <button class="input-side-btn" id="btn-load" title="Charger des livres .txt">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </button>
+        <div class="input-bubble">
+          <textarea id="main-input" placeholder="iMessage" rows="1" autocomplete="off" spellcheck="false"></textarea>
+        </div>
+        <button class="send-btn" id="btn-send">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M2 21L23 12 2 3v7l15 2-15 2z"/></svg>
+        </button>
+      </div>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <input type="file" id="file-input" accept=".txt" multiple style="display:none">
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
